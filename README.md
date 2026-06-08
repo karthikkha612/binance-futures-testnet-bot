@@ -216,5 +216,58 @@ The log file rotates automatically at **5 MB** (3 backups kept).
 | `requests`       | 2.32.3   | HTTP transport (used by python-binance) |
 
 ---
+GUI Trading Bot (Tkinter UI)
+
+This project also includes a desktop GUI built with Tkinter for placing Binance Futures Testnet orders without using the CLI.
+
+Features
+Market & Limit order support
+BUY / SELL selection
+Live order validation
+Clean dark-themed interface
+Instant order response display
+
+
+How to Run the GUI:
+________________________________
+python ui.py
+_________________________________
+
+Make sure your .env file is configured before running:
+
+BINANCE_TESTNET_API_KEY=your_key_here
+BINANCE_TESTNET_API_SECRET=your_secret_here
+GUI Overview
+
+The interface includes:
+
+Symbol input (default: BTCUSDT)
+Side selector (BUY / SELL)
+Order type dropdown (MARKET / LIMIT)
+Quantity field
+Price field (only for LIMIT orders)
+Place Order button
+Order Result panel
+GUI Workflow
+Enter trading parameters
+Click Place Order
+System validates input via validators.py
+Order is sent using BinanceTestnetClient
+Response is displayed in the result panel
+Error Handling in GUI
+
+If something goes wrong:
+
+Validation errors → popup dialog
+API errors → popup dialog with Binance message
+Network issues → displayed as error alert
+⚖️ CLI vs GUI Usage
+Mode	File	Best For
+CLI	cli.py	Automation, scripting, testing
+GUI	ui.py	Manual trading, demos, beginners
+⚠️ Notes
+GUI is only for Binance USDT-M Futures Testnet
+Real trading is not supported unless API endpoints are changed
+Ensure .env is present before launching
 
 
