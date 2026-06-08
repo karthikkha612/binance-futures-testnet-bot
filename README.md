@@ -216,6 +216,4 @@ The log file rotates automatically at **5 MB** (3 backups kept).
 
 ---
 
-## License
 
-MIT – use freely for personal and commercial projects.
