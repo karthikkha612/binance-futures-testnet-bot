@@ -16,6 +16,7 @@ trading_bot/
 │   └── logging_config.py   # rotating file + console logging setup
 ├── logs/
 │   └── trading_bot.log      # auto-created on first run
+|__ui.py
 ├── .env                     # API credentials (never commit this)
 ├── .gitignore
 ├── cli.py                   # CLI entry point (argparse)
